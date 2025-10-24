@@ -1,0 +1,60 @@
+/* ChartCard styling - Per PRD design system */
+
+.chart-card {
+  background-color: #14181f;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.chart-card:hover {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+}
+
+.chart-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(157, 163, 175, 0.2);
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #eaeaea;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.chart-subtitle {
+  font-size: 0.85rem;
+  color: #9da3af;
+  margin: 0.25rem 0 0 0;
+  font-style: italic;
+}
+
+.chart-body {
+  /* Plotly charts will fill this container */
+  width: 100%;
+  min-height: 300px;
+}
+
+/* Ensure Plotly charts are responsive */
+.chart-body > div {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .chart-card {
+    padding: 1rem;
+  }
+
+  .chart-title {
+    font-size: 1rem;
+  }
+
+  .chart-body {
+    min-height: 250px;
+  }
+}
